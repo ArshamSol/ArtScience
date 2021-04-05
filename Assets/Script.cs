@@ -22,12 +22,11 @@ public class Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //GameObject RightHand = GameObject.FindGameObjectWithTag("RightPalm");
+   
         
         if (THUMB != null&&INDEX!=null)
         {
             float m= (THUMB.TipPosition - INDEX.TipPosition).Magnitude;
-            //GameObject.FindGameObjectWithTag("text").GetComponent<Text>().text= m.ToString();
             if (m< 27)
             {
                 //this is pinch
@@ -36,7 +35,6 @@ public class Script : MonoBehaviour
         if (THUMB != null && MIDDLE != null)
         {
             float m = (THUMB.TipPosition - MIDDLE.TipPosition).Magnitude;
-            //GameObject.FindGameObjectWithTag("text").GetComponent<Text>().text = m.ToString();
             if (m < 27)
             {
                 //When middle attach to the thumb
@@ -44,8 +42,7 @@ public class Script : MonoBehaviour
         }
         if (THUMB != null && PINKY != null)
         {
-            float m = (THUMB.TipPosition - PINKY.TipPosition).Magnitude;
-            GameObject.FindGameObjectWithTag("text").GetComponent<Text>().text = m.ToString();
+            float m = (THUMB.TipPosition - PINKY.TipPosition).Magnitude;        
             if (m < 90)
             {
                 //When PINKY attach to the thumb
@@ -54,7 +51,7 @@ public class Script : MonoBehaviour
         if (THUMB != null && RING != null)
         {
             float m = (THUMB.TipPosition - RING.TipPosition).Magnitude;
-            GameObject.FindGameObjectWithTag("text").GetComponent<Text>().text = m.ToString();
+            //GameObject.FindGameObjectWithTag("text").GetComponent<Text>().text = m.ToString();
             if (m < 40)
             {
                 //When RING attach to the thumb
